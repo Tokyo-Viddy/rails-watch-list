@@ -1,0 +1,8 @@
+<div class="container">
+  <h1><%= @list.name %></h1>
+  <ol>
+    <% @list.movies.each do |movie| %>
+      <li><%= movie.title %></li>
+    <% end %>
+  </ol>
+</div>
