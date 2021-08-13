@@ -2,7 +2,14 @@
   <h1>Here are your movie lists:</h1>
   <ul>
     <% @lists.each do |list| %>
-      <li><%= link_to "#{list.name}", list_path(list) %></li>
+      <div class="card-product">
+        <%= list.photo.attached? ? cl_image_tag(list.photo.key, height: 200, crop: :fill) : image_tag('https://pixy.org/src/21/219269.jpg', height: 200) %>
+        <div class="card-product-infos">
+          <h2><%= list.name %></h2>
+        </div>
+      </div>
+
+
     <% end %>
   </ul>
   <%= link_to "Create a new list", new_list_path, class: "btn btn-primary mt-2" %>
