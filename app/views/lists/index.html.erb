@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Here are the lists:</h1>
+  <h1>Here are your movie lists:</h1>
   <ul>
     <% @lists.each do |list| %>
       <li><%= link_to "#{list.name}", list_path(list) %></li>
