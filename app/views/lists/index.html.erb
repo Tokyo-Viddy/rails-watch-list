@@ -1,6 +1,11 @@
 <div class="container">
-  <h1>Here are your movie lists:</h1>
-  <ul>
+  <nav class="navbar navbar-light mb-3 banner-background">
+    <a class="navbar-brand" href="#">
+      <h1>Here are your movie lists:</h1>
+    </a>
+  </nav>
+
+  <div class="grid-container">
     <% @lists.each do |list| %>
       <div class="card-product">
         <%= list.photo.attached? ? cl_image_tag(list.photo.key, height: 200, crop: :fill) : image_tag('https://pixy.org/src/21/219269.jpg', height: 200) %>
@@ -10,6 +15,6 @@
         <%= link_to '', list_path(list), class: 'card-link'  %>
       </div>
     <% end %>
-  </ul>
-  <%= link_to "Create a new list", new_list_path, class: "btn btn-primary mt-2" %>
+  </div>
+  <%= link_to "Create a new list", new_list_path, class: "btn btn-primary mt-3" %>
 </div>

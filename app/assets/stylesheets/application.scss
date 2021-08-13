@@ -11,4 +11,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "card"
+@import "card";
+@import "grid";
+
+.banner-background {
+  background-color:#DDFFBC;
+}
