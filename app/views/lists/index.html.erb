@@ -1,10 +1,12 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "Create a new list", new_list_path, class: "btn btn-primary m-2" %>
+</div>
+<div class="index-banner banner-background">
+  <div class="text-center p-5 mb-3">
+    <h1 >Welcome to Viddy's movie database</h1>
+  </div>
+</div>
 <div class="container">
-  <nav class="navbar navbar-light mb-3 banner-background">
-    <a class="navbar-brand" href="#">
-      <h1>Here are your movie lists:</h1>
-    </a>
-  </nav>
-
   <div class="grid-container">
     <% @lists.each do |list| %>
       <div class="card-product">
@@ -16,5 +18,4 @@
       </div>
     <% end %>
   </div>
-  <%= link_to "Create a new list", new_list_path, class: "btn btn-primary mt-3" %>
 </div>
