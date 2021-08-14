@@ -4,7 +4,9 @@ puts 'Destroying movies'
 Movie.destroy_all
 # List.destroy_all
 
-url = 'http://tmdb.lewagon.com/movie/top_rated'
+url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=3ff6f730defa2300b01e17dd2ace8608&language=en-US&page=1'
+
+# 'https://api.themoviedb.org/3/movie/550?api_key=3ff6f730defa2300b01e17dd2ace8608'
 response = JSON.parse(URI.open(url).read)
 
 response['results'].each do |movie_hash|
