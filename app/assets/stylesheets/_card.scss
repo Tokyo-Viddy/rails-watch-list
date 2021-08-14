@@ -15,7 +15,7 @@
 
 .card-product {
   overflow: hidden;
-  height: 100px;
+  height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -58,11 +58,5 @@
 .card-background-colour {
   background-color: #52734D;
 }
-// TODO: Make a hover option to reveal all the movie description
-// .class-body p :hover {
-  // deal with truncate
-// }
 
-// .card-img-size {
-
-// }
+// TODO: change the card size so it fills the whole CSS grid row.
