@@ -10,7 +10,7 @@
   <div class="grid-container">
     <% @lists.each do |list| %>
       <div class="card-product">
-        <%= list.photo.attached? ? cl_image_tag(list.photo.key, height: 200, crop: :fill) : image_tag('https://pixy.org/src/21/219269.jpg', height: 200) %>
+        <%= list.photo.attached? ? cl_image_tag(list.photo.key, height: 200, crop: :fill) : image_tag('https://picsum.photos/200', height: 200, crop: :fill) %>
         <div class="card-product-infos">
           <h2><%= list.name %></h2>
         </div>
