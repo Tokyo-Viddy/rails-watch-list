@@ -1,9 +1,24 @@
-<div class="controller">
-  <h1>Let's make a new list</h1>
-  <%= simple_form_for @list do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit class: "btn btn-primary mt-2" %>
-    <%= link_to 'Back to list index', lists_path, class: 'btn btn-secondary mt-2' %>
-  <% end %>
+<div class="grid-container">
+  <div class="grid-header background-colour">
+    <div class="card-category m-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @list.photo.attached? ? cl_image_path(@list.photo.key, crop: :fill) : image_path('https://pixy.org/src/21/219269.jpg', height: 200) %>')">
+      <h1>Let's make a new list</h1>
+    </div>
+  </div>
+  <div class="grid-navbar">
+  </div>
+  <div class="main-grid-show">
+    <div class="controller">
+      <%= simple_form_for @list do |f| %>
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit class: "btn btn-primary mt-2" %>
+        <%= link_to 'Back to list index', lists_path, class: 'btn btn-secondary mt-2' %>
+      <% end %>
+    </div>
+  </div>
+  <div class="grid-footer index-banner footer-background">
+    <div class="text-center p-5">
+      <h3 class="text-center mt-4">Made possible with help from Le Wagon Tokyo</h3>
+    </div>
+  </div>
 </div>
