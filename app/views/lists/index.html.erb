@@ -1,13 +1,13 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "Create a new list", new_list_path, class: "btn btn-primary m-2" %>
-</div>
-<div class="index-banner banner-background">
-  <div class="text-center p-5 mb-3 text-white">
-    <h1 >Viddy's movie database</h1>
+<div class="grid-container">
+  <div class="grid-header index-banner banner-background">
+    <div class="text-center p-5 mb-3 text-white">
+      <h1 >Viddy's movie database</h1>
+    </div>
   </div>
-</div>
-<div class="container">
-  <div class="grid-container">
+  <div class="grid-navbar text-center">
+    <%= link_to "New List", new_list_path, class: "btn btn-primary m-2" %>
+  </div>
+  <div class="main">
     <% @lists.each do |list| %>
       <div class="card-product">
         <%= list.photo.attached? ? cl_image_tag(list.photo.key, height: 300, crop: :fill) : image_tag('https://picsum.photos/200', height: 300, crop: :fill) %>
@@ -18,9 +18,11 @@
       </div>
     <% end %>
   </div>
-</div>
-<div class="index-banner footer-background mt-3">
-  <div class="text-center p-5">
-    <h3 class="text-center mt-4">Made possible with help from Le Wagon Tokyo</h3>
+  <div class="right-space">
+  </div>
+  <div class="grid-footer index-banner footer-background">
+    <div class="text-center p-5">
+      <h3 class="text-center mt-4">Made possible with help from Le Wagon Tokyo</h3>
+    </div>
   </div>
 </div>

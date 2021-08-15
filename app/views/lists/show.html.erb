@@ -6,8 +6,8 @@
     </ul>
   </div>
 </div>
-<div class="container">
-  <div class="grid-container">
+<div class="container background-colour">
+  <div class="grid-container pb-3">
     <div class="container list-title">
       <div class="card-category m-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @list.photo.attached? ? cl_image_path(@list.photo.key, crop: :fill) : image_path('https://pixy.org/src/21/219269.jpg', height: 200) %>')">
         <h1><%= @list.name %></h1>
@@ -29,7 +29,7 @@
     <% end %>
   </div>
 </div>
-<div class="index-banner footer-background mt-3">
+<div class="index-banner footer-background">
   <div class="text-center p-5">
     <h3 class="text-center mt-4">Made possible with help from Le Wagon Tokyo</h3>
   </div>
